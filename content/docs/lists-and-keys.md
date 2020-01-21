@@ -50,7 +50,7 @@ Bu kod, 1 ile 5 arasındaki sayıların madde işaretli listesini görüntüler.
 
 Genellikle listeleri bir [bileşenin](/docs/components-and-props.html) içinde render edersiniz.
 
-Bir önceki örneği, bir `sayı` dizisini kabul eden ve bir öğe listesi çıktısı veren bir bileşende yeniden düzenleyebiliriz.
+Bir önceki örneği, bir `sayı` dizisini kabul eden ve bir öge listesi çıktısı veren bir bileşende yeniden düzenleyebiliriz.
 
 ```javascript{3-5,7,13}
 function NumberList(props) {
@@ -70,7 +70,7 @@ ReactDOM.render(
 );
 ```
 
-Bu kodu çalıştırdığınızda, liste elemanları için bir anahtar verilmesi gerektiği konusunda size bir uyarı verilir. Bir "anahtar", öğe listeleri oluştururken eklemeniz gereken bir string özelliğidir. Bunun neden önemli olduğunu bir sonraki bölümde inceleyeceğiz.
+Bu kodu çalıştırdığınızda, liste elemanları için bir anahtar verilmesi gerektiği konusunda size bir uyarı verilir. Bir "anahtar", öge listeleri oluştururken eklemeniz gereken bir string özelliğidir. Bunun neden önemli olduğunu bir sonraki bölümde inceleyeceğiz.
 
 `numbers.map()` içindeki liste elemanlarına birer `anahtar` atayalım ve eksik anahtar sorununu düzeltelim:
 
@@ -98,7 +98,7 @@ ReactDOM.render(
 
 ## Anahtarlar {#keys}
 
-Anahtarlar; hangi öğelerin değiştiğini, eklendiğini ya da silindiğini belirleme noktasında React'e yardımcı olur:
+Anahtarlar; hangi ögelerin değiştiğini, eklendiğini ya da silindiğini belirleme noktasında React'e yardımcı olur:
 
 ```js{3}
 const numbers = [1, 2, 3, 4, 5];
@@ -109,7 +109,7 @@ const listItems = numbers.map((number) =>
 );
 ```
 
-Bir anahtar seçmenin en iyi yolu, kardeşleri arasında bir liste öğesini benzersiz olarak tanımlayan bir string kullanmaktır. Çoğu zaman verinizin içindeki ID'leri anahtar olarak kullanırsınız:
+Bir anahtar seçmenin en iyi yolu, kardeşleri arasında bir liste ögesini benzersiz olarak tanımlayan bir string kullanmaktır. Çoğu zaman verinizin içindeki ID'leri anahtar olarak kullanırsınız:
 
 ```js{2}
 const todoItems = todos.map((todo) =>
@@ -119,7 +119,7 @@ const todoItems = todos.map((todo) =>
 );
 ```
 
-Render edilen öğeleriniz için sabit ID'leriniz yoksa, son çare olarak, öğenin index numarasını anahtar olarak kullanabilirsiniz:
+Render edilen ögeleriniz için sabit ID'leriniz yoksa, son çare olarak, ögenin index numarasını anahtar olarak kullanabilirsiniz:
 
 ```js{2,3}
 const todoItems = todos.map((todo, index) =>
@@ -129,7 +129,7 @@ const todoItems = todos.map((todo, index) =>
   </li>
 );
 ```
-Dizi içindeki elemanların değişme ihtimali varsa, anahtarlar için index numaralarının kullanılmasını önermiyoruz. Bu, performansı olumsuz yönde etkileyebilir ve bileşen state'i ile ilgili sorunlara neden olabilir. [Index numarasının anahtar olarak kullanılmasının olumsuz etkilerine dair detaylı açıklama](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318) için Robin Pokorny'nin makalesine göz atın. Öğeleri listelemek için belirgin bir anahtar atamamayı seçtiğinizde, React varsayılan olarak index numaralarını anahtar olarak kullanacaktır.
+Dizi içindeki elemanların değişme ihtimali varsa, anahtarlar için index numaralarının kullanılmasını önermiyoruz. Bu, performansı olumsuz yönde etkileyebilir ve bileşen state'i ile ilgili sorunlara neden olabilir. [Index numarasının anahtar olarak kullanılmasının olumsuz etkilerine dair detaylı açıklama](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318) için Robin Pokorny'nin makalesine göz atın. Ögeleri listelemek için belirgin bir anahtar atamamayı seçtiğinizde, React varsayılan olarak index numaralarını anahtar olarak kullanacaktır.
 
 Daha fazla bilgi edinmek istiyorsanız, işte size [neden anahtarların gerekli olduğuna dair](/docs/reconciliation.html#recursing-on-children) detaylı bir açıklama.
 
@@ -137,7 +137,7 @@ Daha fazla bilgi edinmek istiyorsanız, işte size [neden anahtarların gerekli 
 
 Anahtarlar yalnızca çevreleyen dizinin bağlamında anlamlıdır.
 
-Örneğin, bir `ListItem` bileşenini [çıkarırsanız](/docs/components-and-props.html#extracting-components), anahtarı `ListItem`'in içindeki `<li>` öğesinden ziyade, dizinin içindeki `<ListItem />` öğelerinde tutmalısınız.
+Örneğin, bir `ListItem` bileşenini [çıkarırsanız](/docs/components-and-props.html#extracting-components), anahtarı `ListItem`'in içindeki `<li>` ögesinden ziyade, dizinin içindeki `<ListItem />` ögelerinde tutmalısınız.
 
 **Örnek: Yanlış Anahtar Kullanımı**
 
